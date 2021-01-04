@@ -9,6 +9,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.example.livedatasample.R
 import com.example.livedatasample.databinding.FragmentInputBinding
 import com.example.livedatasample.viewmodel.InputViewModel
@@ -50,9 +51,7 @@ class InputFragment : Fragment() {
             Toast.makeText(activity, binding.input4.text.toString(), Toast.LENGTH_SHORT).show()
         }
         binding.button5.setOnClickListener {
-            activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.fragmentContainer, NextFragment())
-                ?.addToBackStack(null)?.commit()
+            findNavController().navigate(R.id.action_inputFragment_to_nextFragment)
         }
 
         binding.input1.addTextChangedListener {

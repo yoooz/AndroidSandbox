@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
+import com.example.livedatasample.R
 import com.example.livedatasample.databinding.FragmentNextBinding
 import com.example.livedatasample.viewmodel.InputViewModel
 
@@ -33,5 +35,9 @@ class NextFragment: Fragment() {
         inputViewModel.input2.observe(viewLifecycleOwner, Observer { str2 -> binding.text2.text = str2 })
         inputViewModel.input3.observe(viewLifecycleOwner, Observer { str3 -> binding.text3.text = str3 })
         inputViewModel.input4.observe(viewLifecycleOwner, Observer { str4 -> binding.text4.text = str4 })
+
+        binding.button.setOnClickListener {
+            findNavController().navigate(R.id.action_nextFragment_to_nextActivity)
+        }
     }
 }
