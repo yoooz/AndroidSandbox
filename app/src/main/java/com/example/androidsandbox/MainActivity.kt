@@ -1,8 +1,8 @@
-package com.example.livedatasample
+package com.example.androidsandbox
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
-import com.example.livedatasample.fragment.MainFragment
+import com.example.androidsandbox.fragment.MainFragment
 
 class MainActivity : FragmentActivity() {
 

@@ -1,4 +1,4 @@
-package com.example.livedatasample
+package com.example.androidsandbox
 
 import org.junit.Test
 

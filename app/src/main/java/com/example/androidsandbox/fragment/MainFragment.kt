@@ -1,4 +1,4 @@
-package com.example.livedatasample.fragment
+package com.example.androidsandbox.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.livedatasample.R
-import com.example.livedatasample.databinding.FragmentMainBinding
+import com.example.androidsandbox.R
+import com.example.androidsandbox.databinding.FragmentMainBinding
 
 class MainFragment: Fragment() {
     private var _binding: FragmentMainBinding? = null

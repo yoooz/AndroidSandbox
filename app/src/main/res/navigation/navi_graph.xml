@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/blankFragment"
-        android:name="com.example.livedatasample.BlankFragment"
+        android:name="com.example.androidsandbox.BlankFragment"
         android:label="fragment_blank"
         tools:layout="@layout/fragment_blank" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.livedatasample.fragment.MainFragment"
+        android:name="com.example.androidsandbox.fragment.MainFragment"
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_inputFragment"
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/inputFragment"
-        android:name="com.example.livedatasample.fragment.InputFragment"
+        android:name="com.example.androidsandbox.fragment.InputFragment"
         android:label="InputFragment" >
         <action
             android:id="@+id/action_inputFragment_to_nextFragment"
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/nextFragment"
-        android:name="com.example.livedatasample.fragment.NextFragment"
+        android:name="com.example.androidsandbox.fragment.NextFragment"
         android:label="NextFragment" >
         <action
             android:id="@+id/action_nextFragment_to_nextActivity"
@@ -40,7 +40,7 @@
     </fragment>
     <activity
         android:id="@+id/nextActivity"
-        android:name="com.example.livedatasample.NextActivity"
+        android:name="com.example.androidsandbox.NextActivity"
         android:label="activity_next"
         tools:layout="@layout/activity_next" />
 </navigation>

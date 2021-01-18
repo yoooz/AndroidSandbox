@@ -1,4 +1,4 @@
-package com.example.livedatasample.fragment
+package com.example.androidsandbox.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.example.livedatasample.R
-import com.example.livedatasample.databinding.FragmentInputBinding
-import com.example.livedatasample.viewmodel.InputViewModel
+import com.example.androidsandbox.R
+import com.example.androidsandbox.databinding.FragmentInputBinding
+import com.example.androidsandbox.viewmodel.InputViewModel
 
 class InputFragment : Fragment() {
     private val inputViewModel: InputViewModel by activityViewModels()

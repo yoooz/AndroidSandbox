@@ -1,4 +1,4 @@
-package com.example.livedatasample
+package com.example.androidsandbox
 
 import android.graphics.Typeface
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.livedatasample.databinding.FragmentBlankBinding
+import com.example.androidsandbox.databinding.FragmentBlankBinding
 import it.sephiroth.android.library.xtooltip.ClosePolicy
 import it.sephiroth.android.library.xtooltip.Tooltip
 
