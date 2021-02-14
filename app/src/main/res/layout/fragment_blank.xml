@@ -27,4 +27,35 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
+    <Button
+        android:id="@+id/alertButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="アラート1"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/alertButton2" />
+
+    <Button
+        android:id="@+id/alertButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="アラート2"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/alertButton1"
+        app:layout_constraintRight_toLeftOf="@id/alertButton3"/>
+
+    <Button
+        android:id="@+id/alertButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="アラート3"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/alertButton2"
+        app:layout_constraintRight_toRightOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

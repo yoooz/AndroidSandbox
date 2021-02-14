@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
 import com.example.androidsandbox.databinding.FragmentBlankBinding
+import com.example.androidsandbox.fragment.CommonDialogFragment
+import com.example.androidsandbox.fragment.CommonDialogFragmentBuilder
 import it.sephiroth.android.library.xtooltip.ClosePolicy
 import it.sephiroth.android.library.xtooltip.Tooltip
 
@@ -40,7 +43,47 @@ class BlankFragment : Fragment() {
             findNavController().navigate(R.id.action_blankFragment_to_mainFragment)
         }
 
-        binding.root.post { showToolTip() }
+        binding.alertButton1.setOnClickListener {
+            AlertDialog.Builder(requireActivity())
+                    .setTitle("アラート1")
+                    .setMessage("AlertDialogBuilderから作ったやつ")
+                    .setPositiveButton("OK") { _, _ ->
+                        Toast.makeText(requireActivity(), "OKボタン", Toast.LENGTH_SHORT).show()
+                    }
+                    .setNegativeButton("CANCEL") { _, _ ->
+                        Toast.makeText(requireActivity(), "CANCELボタン", Toast.LENGTH_SHORT).show()
+                    }
+                    .show()
+        }
+
+        binding.alertButton2.setOnClickListener {
+            val callback = object : CommonDialogFragment.Companion.Callback {
+                override fun onClickPositiveButton() {
+                    Toast.makeText(requireActivity(), "OKボタン", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onClickNegativeButton() {
+                    Toast.makeText(requireActivity(), "CANCELボタン", Toast.LENGTH_SHORT).show()
+                }
+            }
+            CommonDialogFragment.show(requireActivity().supportFragmentManager,
+            "アラート2", "Callbackを保持したDialog", "OK", "CANCEL", callback)
+        }
+
+        binding.alertButton3.setOnClickListener {
+            CommonDialogFragmentBuilder(requireActivity())
+                    .setTitle("アラート1")
+                    .setMessage("AlertDialogBuilderから作ったやつ")
+                    .setPositiveButton("OK") { _, _ ->
+                        Toast.makeText(requireActivity(), "OKボタン", Toast.LENGTH_SHORT).show()
+                    }
+                    .setNegativeButton("CANCEL") { _, _ ->
+                        Toast.makeText(requireActivity(), "CANCELボタン", Toast.LENGTH_SHORT).show()
+                    }
+                    .show()
+        }
+
+//        binding.root.post { showToolTip() }
     }
 
     private fun showToolTip() {
